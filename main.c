@@ -1,10 +1,11 @@
 #include <studio.h>
 
 void imprimirBob(){
-	print_f("Bob")
+	printf("Bob");
 
 }
 
 int main(){
+	imprimirBob();
 	return 0;
 }
