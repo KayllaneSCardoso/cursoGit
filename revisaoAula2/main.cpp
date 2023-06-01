@@ -1,6 +1,13 @@
 #include <iostream>
 #include <stdLib.h>
 using namespace std;
+int calcula(int n1, int n2, int calcOperador){
+    int resultado;
+    switch(calcOperador){
+        case '+': resultado = n1 + n2;
+        break;
+    }
+}
 
 int main(){
 	int numOne, numTwo;
