@@ -1,7 +1,7 @@
 #include <iostream>
-#include <stdLib.h>
+#include <stdlib.h>
 using namespace std;
-int calcula(int n1, int n2, int calcOperador){
+int calcula(int n1, int n2, int calcOperador, int &i){
     int resultado;
     switch(calcOperador){
         case '+': resultado = n1 + n2;
@@ -12,12 +12,16 @@ int calcula(int n1, int n2, int calcOperador){
         break;
         case '/': resultado = n1/n2;
         break;
+        default:
+        i = 0;
+        return 0;
     }
+    i = 1;
     return resultado;
 }
 
 int main(){
-	int numOne, numTwo;
+	int numOne, numTwo, i, resultadoCalculo;
 	char operador;
 	cout << "Insira o primeiro numero:\n";
 	cin >> numOne;
@@ -25,5 +29,6 @@ int main(){
 	cin >> numTwo;
 	cout << "Insira a operacao a ser realizada: (+ 'soma', -'subtracao', * 'multiplicacao' e / 'divisao')\n";
 	cin >> operador;
-		return 0;
+	resultadoCalculo = calcula(numOne,numTwo, operador, i);
+	i != 1 ? cout << "selecione um numero ou operador valido!" : cout << numOne << operador << numTwo << " = " << resultadoCalculo;
 }
