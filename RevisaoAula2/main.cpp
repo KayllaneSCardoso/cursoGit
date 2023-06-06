@@ -12,6 +12,13 @@ int calcula(int n1, int n2, int calcOperador, int &i){
         break;
         case '/': resultado = n1/n2;
         break;
+        default:
+        i = 0;
+        return 0;
+    }
+    i = 1;
+    return resultado;
+}
     }
 }
 int main(){
@@ -23,4 +30,6 @@ int main(){
 	cin >> numTwo;
 	cout << "Insira a operacao a ser realizada: (+ 'soma', -'subtracao', * 'multiplicacao' e / 'divisao')\n";
 	cin >> operador;
+	resultadoCalculo = calcula(numOne,numTwo, operador, i);
+	i != 1 ? cout << "selecione um numero ou operador valido!" : cout << numOne << operador << numTwo << " = " << resultadoCalculo;
 }
