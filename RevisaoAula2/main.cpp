@@ -6,6 +6,8 @@ int calcula(int n1, int n2, int calcOperador, int &i){
     switch(calcOperador){
         case '+': resultado = n1 + n2;
         break;
+        case '-': resultado = n1 - n2;
+        break;
     }
 }
 int main(){
